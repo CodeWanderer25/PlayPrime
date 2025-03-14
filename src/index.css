@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+}
+
+/* Force scrollbar visibility */
+.scrollbar {
+    border: 2px solid rgb(219, 189, 189);
+  }
+  
+  
+::-webkit-scrollbar-thumb{
+  background-color: #b3b3b3;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.select {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  
+}
+
+select {
+  text-align: center; /* Center text */
+  text-align-last: center; /* Ensures the selected value is centered */
+  width: 150px; /* Adjust width as needed */
+  padding: 4px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #1e1e1e; /* Dark theme background */
+  color: white; /* Text color */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* For WebKit browsers (Chrome, Safari, Edge) */
+select::-webkit-select {
+  text-align: center;
+}
+
+/* Remove default arrow styling for a cleaner look */
+select:focus {
+  outline: none;
+  border-color: #007bff; /* Highlight color when focused */
+}
+
+body {
+  background-color: black !important;
+}
+
+html, body {
+  overflow-x: hidden; /* Horizontal scroll ko disable karega */
+  max-width: 200vw; /* Extra width issue ko fix karega */
+}
+
